@@ -1,10 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-#include <string>
-#include <list>
-#include <iterator>
-#include <vector>
+#include "Expression.h"
 
 using namespace std;
 
@@ -17,8 +14,11 @@ int main() {
     else {
         ofstream fout;
         string line;
+        Expression expressionVec = Expression();
         while (getline(fin, line)) { //Gets each line from the input file
-
+            expressionVec.pushBack(line);
         }
+
+        expressionVec.print();
     }
 }
