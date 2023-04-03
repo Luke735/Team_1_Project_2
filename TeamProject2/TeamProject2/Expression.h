@@ -15,6 +15,7 @@ public:
 	void print();
 	string toPostfix(int index);
 	int evaluate(string str);
+	static int precedence(string);
 private:
 	vector<string> infixExpressions;
 	
