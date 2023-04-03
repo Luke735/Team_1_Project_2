@@ -5,6 +5,15 @@ using namespace std;
 //Constructor, does nothing
 Expression::Expression() { }
 
+int Expression::precedence(string str) {
+	if (str == "^") { return 1; }
+	if (str == "*" || str == "/" || str == "%") { return 2; }
+	if (str == "+" || str == "-") { return 3; }
+	if (str == ">" || str == ">=" || str == "<" || str == "<=") { return 4; }
+	if (str == "=" || str == "!") { return 5; }
+	if (str == "&") { return 6; }
+	if (str == "|") { return 7; }
+}
 
 /** Returns the postfix expression of the infix string passed to it.
 	@param infixExp: the infix expression
