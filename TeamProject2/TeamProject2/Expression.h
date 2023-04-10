@@ -13,12 +13,12 @@ public:
 	Expression();
 	void pushBack(string str);
 	void print();
-	string toPostfix(int index);
+	string toPostfix(string str);
 	int evaluate(string str);
 	static int precedence(string);
 private:
 	vector<string> infixExpressions;
-	
+
 };
 
 #endif
