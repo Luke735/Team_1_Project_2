@@ -5,20 +5,21 @@
 #include <fstream>
 #include <iomanip>
 #include <string>
-#include <vector>
+#include <sstream>
+#include <stack>
+#include <unordered_map>
 using namespace std;
 
 class Expression {
 public:
-	Expression();
-	void pushBack(string str);
+	Expression(string exp);
 	void print();
-	string toPostfix(string str);
-	int evaluate(string str);
+	string toPostfix(string exp);
+	int evaluate(const string& postfixStr);
+	bool isNumber(const string& str);
 	static int precedence(string);
 private:
-	vector<string> infixExpressions;
-
+	string infixExpression;
 };
 
 #endif
