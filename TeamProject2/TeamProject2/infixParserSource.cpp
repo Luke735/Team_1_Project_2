@@ -6,22 +6,21 @@
 using namespace std;
 
 int main() {
-   ifstream fin("testCaseFile.txt");
+    ifstream fin("testCaseFile.txt");
 
-   if (!fin.is_open()) {
-       cout << "Could not open file" << endl;
-       return -1;
-   }
-   else {
+    if (!fin.is_open()) {
+        cout << "Could not open file" << endl;
+    }
+    else {
         ofstream fout;
         string line;
-        Expression expressionVec = Expression();
-        while (getline(fin, line)) { //Gets each line from the input file
-            cout << "Original expression: " << line << endl;
-            Expression e;
-            cout << "Postfix expression: " << e.toPostfix(line) << endl;
-            cout << "Evaluated expression: " << e.evaluate(e.toPostfix(line)) << endl;
+        
+        //Gets each line from the input file
+        while (getline(fin, line)) {
+            //construct a new Expression object with the infix string
+            Expression expression = Expression(line);
+            //Expression's print() prints the infix expression, calls toPostfix() and prints its return, then calls evaluate() and prints its return
+            expression.print();
         }
-   }
-   return 0;
+    }
 }
