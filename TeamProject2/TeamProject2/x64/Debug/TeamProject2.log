@@ -1,0 +1,5 @@
+﻿  Expression.cpp
+C:\Users\smash\source\repos\TeamProject2\TeamProject2\Expression.cpp(133,38): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  infixParserSource.cpp
+  Generating Code...
+  TeamProject2.vcxproj -> C:\Users\smash\source\repos\TeamProject2\x64\Debug\TeamProject2.exe
