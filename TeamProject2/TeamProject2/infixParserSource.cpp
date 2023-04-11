@@ -10,6 +10,7 @@ int main() {
 
     if (!fin.is_open()) {
         cout << "Could not open file" << endl;
+        return -1;
     }
     else {
         ofstream fout;
@@ -23,4 +24,5 @@ int main() {
             expression.print();
         }
     }
+    return 0;
 }
